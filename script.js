@@ -15300,7 +15300,7 @@ document.getElementById('guessInput').addEventListener('keydown', function(event
 
 function handleGuess() {
     const input = document.getElementById('guessInput');
-    const guess = input.value.trim();
+    const guess = input.value.trim().toLowerCase();
     const warningMessage = document.getElementById('warningMessage');
     const invalidWord = document.getElementById('invalidWord');
 
