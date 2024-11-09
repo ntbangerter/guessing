@@ -70,11 +70,11 @@ button:disabled {
  }
 
 .give-up-btn {
-    background-color: #d9534f; /* Red color */
+    background-color: #d9534f;
 }
 
 .give-up-btn:hover {
-    background-color: #c9302c; /* Darker red on hover */
+    background-color: #c9302c;
 }
 
 .give-up-btn:disabled {

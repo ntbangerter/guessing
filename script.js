@@ -15308,14 +15308,14 @@ function handleGuess() {
 
     if (guess) {
 	if (previousGuesses.has(guess)) {
-            input.value = ""; // Clear the input
+            input.value = "";
             return;
         }
 
 	if (!validWords.includes(guess)) {
 	    invalidWord.textContent = guess.toUpperCase();
-	    warningMessage.style.display = 'block'; // Show the warning message
-            input.value = ""; // Clear the input
+	    warningMessage.style.display = 'block';
+            input.value = "";
             return;
         }
 
@@ -15354,7 +15354,7 @@ function sortList(listId) {
 
 document.getElementById('giveUp').addEventListener('click', function() {
     document.getElementById('revealedWord').textContent = targetWord.toUpperCase();
-    document.getElementById('giveUpMessage').style.display = 'block'; // Show the give-up message
-    document.getElementById('submitGuess').disabled = true; // Disable guessing
+    document.getElementById('giveUpMessage').style.display = 'block';
+    document.getElementById('submitGuess').disabled = true;
     document.getElementById('giveUp').disabled = true;
 });
