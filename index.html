@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mom's Guessing Game</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mom's Guessing Game</h1>
+        <div class="guess-list">
+            <!-- <h2>Previous Guesses</h2> -->
+            <ul id="guesses_before">
+            </ul>
+        </div>
+        <div class="input-area">
+            <input type="text" id="guessInput" placeholder="Enter your guess..." maxlength="20">
+            <button id="submitGuess">Submit Guess</button>
+	    <button id="giveUp" class="give-up-btn">Give Up</button>
+        </div>
+	<div id="warningMessage" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #d9534f; background-color: #f2dede; color: #a94442;">
+	  <span id="invalidWord"></span> is not a valid word.
+	</div>
+	<div id="congratulations" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #4CAF50; background-color: #dff0d8; color: #3c763d;">
+	  <strong>Congratulations!</strong> You've guessed the word correctly! The word was <span id="correctWord"></span>.
+	</div>
+	<div id="giveUpMessage" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #f0ad4e; background-color: #fcf8e3; color: #8a6d3b;">
+	  The target word was <span id="revealedWord"></span>.
+	</div>
+	<div class="guess-list">
+            <!-- <h2>Previous Guesses</h2> -->
+            <ul id="guesses_after">
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
