@@ -8,31 +8,37 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mom's Guessing Game</h1>
-        <div class="guess-list">
-            <!-- <h2>Previous Guesses</h2> -->
-            <ul id="guesses_before">
-            </ul>
-        </div>
-        <div class="input-area">
-            <input type="text" id="guessInput" placeholder="Enter your guess..." maxlength="20">
-            <button id="submitGuess">Submit Guess</button>
-	    <button id="giveUp" class="give-up-btn">Give Up</button>
-        </div>
-	<div id="warningMessage" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #d9534f; background-color: #f2dede; color: #a94442;">
-	  <span id="invalidWord"></span> is not a valid word.
+      <h1>Mom's Guessing Game</h1>
+      <div class="input-area">
+	<div>
+	  <input type="text" id="guessInput" placeholder="Enter your guess..." maxlength="20">
 	</div>
-	<div id="congratulations" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #4CAF50; background-color: #dff0d8; color: #3c763d;">
-	  <strong>Congratulations!</strong> You guessed the word correctly: <span id="correctWord"></span>.
+	<div>
+          <button id="submitGuess">Submit Guess</button>
+	  <button id="revealNext" class="reveal-next-btn">Reveal Next</button>
+          <button id="giveUp" class="give-up-btn">Reveal All</button>
 	</div>
-	<div id="giveUpMessage" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #f0ad4e; background-color: #fcf8e3; color: #8a6d3b;">
-	  The target word was <span id="revealedWord"></span>.
-	</div>
-	<div class="guess-list">
-            <!-- <h2>Previous Guesses</h2> -->
-            <ul id="guesses_after">
-            </ul>
-        </div>
+      </div>
+      <div id="warningMessage" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #d9534f; background-color: #f2dede; color: #a94442;">
+	<span id="invalidWord"></span> is not a valid word.
+      </div>
+      <div id="congratulations" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #4CAF50; background-color: #dff0d8; color: #3c763d;">
+	<strong>Congratulations!</strong> You guessed the word correctly: <span id="correctWord"></span>.
+      </div>
+      <div id="giveUpMessage" style="display: none; margin-top: 20px; padding: 10px; border: 1px solid #f0ad4e; background-color: #fcf8e3; color: #8a6d3b;">
+	The target word was <span id="revealedWord"></span>.
+      </div>
+      <div class="guess-list">
+        <ul id="guesses_before">
+        </ul>
+      </div>
+      <div id="matchedLetters">
+	<div id="matchedOutput" style="display: inline-flex;"></div>
+      </div>
+      <div class="guess-list">
+        <ul id="guesses_after">
+        </ul>
+      </div>
     </div>
 
     <script src="script.js"></script>
