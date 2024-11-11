@@ -113,7 +113,7 @@ function sortList(listId) {
     items.forEach(item => list.appendChild(item));
 }
 
-document.getElementById('giveUp').addEventListener('click', function() {
+function giveUp() {
     document.getElementById('revealedWord').textContent = targetWord.toUpperCase();
     document.getElementById('giveUpMessage').style.display = 'block';
     document.getElementById('submitGuess').disabled = true;
@@ -121,13 +121,21 @@ document.getElementById('giveUp').addEventListener('click', function() {
     document.getElementById('giveUp').disabled = true;
 
     displayMatchedLetters(targetWord);
+}
+
+document.getElementById('giveUp').addEventListener('click', function() {
+    giveUp();
 });
 
 document.getElementById('revealNext').addEventListener('click', function() {
 
-    console.log(matchedLetters);
-
     for (let i = 0; i < matchedLetters.length; i++) {
+
+	if (i === (matchedLetters.length - 1)) {
+	    giveUp();
+	    return;
+	}
+
 	if (matchedLetters[i] === '_') {
 	    matchedLetters = targetWord.slice(0, i+1);
 	    for (let i = matchedLetters.length; i < targetWord.length; i++) {
